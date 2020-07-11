@@ -1,0 +1,101 @@
+#familysite {
+    width: 100%; background: #999;
+    .inner {width: 1180px; height: 60px;}
+}
+
+
+#footer {
+    width: 100%; padding: 50px 0 30px; background: #333;
+
+    .inner {
+        width: 1180px; margin: 0 auto; position: relative; 
+    
+        .wrap {
+            width: 100%;
+
+            &::after {content:''; display: block; clear: both;}
+            h1 {
+                float: left; position: absolute; left: 20px; top: 20%;
+                a img {width: 130px; margin-left: 10px;}
+            }
+            
+            .policy {
+                width: 30%;margin-left: 30%;float: left; height: 100px; margin-bottom: 60px;
+                .list-1{
+                    &::after {content:''; display: block; clear: both;}
+                    li { 
+                        margin-bottom: 10px; float: left;width: 50%;
+                        a {font: 12px/1 'Roboto', sans-serif; color:#ccc;}
+                    }
+
+                }
+
+                .list-2{
+                    float: right; width: 40%; margin-bottom: 20px;
+                }
+
+                .list-3{
+                    float: right; width: 40%; margin-bottom: 20px;
+                }
+            }
+
+            dt {font: bold 12px/1.8 'Roboto', sans-serif; color: #ccc;}
+            dd {font: 12px/1.5 'Roboto', sans-serif; color: #ccc;}
+            p {float: left; width: 100%;font: 10px/1.5 'Roboto', sans-serif; color: #ccc; padding-top: 30px; border-top: 1px solid #ccc;text-align: center;}
+        }
+    }
+}
+
+
+/* tablet */
+@media screen and (max-width:$tablet){
+    #familysite {
+        .inner {width: 100%;}   
+    }
+
+    #footer {
+        .inner {
+            width: 90%; 
+            .wrap {
+                h1 {left: 0;}
+                .policy {
+                    width: 35%;margin-left: 25%;
+                
+                    .list-1 {
+                        &::after {content:''; display: block; clear: both;}
+                        li { 
+                            margin-bottom: 10px; float: left;width: 50%;
+                            a {font: 12px/1 'arial'; color:#ccc;}
+                        }
+                    }
+
+                    .list-2 {float: right; width: 40%; margin-bottom: 20px;}
+                    .list-3 {float: right; width: 40%; margin-bottom: 20px;}
+                }
+            }
+        }
+    }
+
+}
+
+
+/* mobile */
+@media screen and (max-width:$mobile){
+    #footer {
+        .inner {
+            .wrap {
+                h1 {left: 0; top: 40px;}
+                .policy {
+                    width: 60%; float: right; height: 70px;
+                
+                    
+                }
+                .list-2 {float: left; width: 100%; margin-bottom: 0;}
+                .list-3 {float: left; width: 100%; margin-bottom: 20px;}
+                dt {display: inline-block; font-size: 13px; margin-right: 10px;}
+                dd {display: inline-block; margin-right: 5px;}
+                p {float: left; width: 100%;font: 10px/1.5 'arial'; color: #ccc; padding-top: 20px; border-top: 1px solid #ccc;text-align: center;}
+            }
+        }
+    }
+}
